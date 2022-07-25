@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login da Pagina</title>
+
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+
+        body{
+     background-color: #2f4470;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     overflow: hidden;
+}
+.login{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     background-color: #181920;
+     border-radius: 10px;
+     width: 355px;
+     justify-content: center;
+     align-items: center;
+     height: 320px;
+     padding: 35px;
+}
+.login form{
+     display: flex;
+     width: 100%;
+     margin: 200px auto;
+     flex-direction: column;
+     text-align: center;
+}
+.login input {
+     margin-top: 10px;
+     background-color: #252a34;
+     padding-left: 10px;
+     color: #cbd0f7;
+     border: none;
+     height: 45px;
+     outline: none;
+     border-radius: 8px;
+     
+}
+       
+        .login img{
+     width: 130px;
+     height: auto;
+
+     
+}
+    </style>
+
+</head>
+<body>
+      <div class="login">
+       <div><img src="/imagens/logo.png" alt="Logo">
+      </div>
+
+    <form>
+
+        <input type="text" placeholder="Nome de usuario" id="login">
+        <input type="password" placeholder="Sua senha" id="senha">
+        <input type="submit" onclick="logar(); return false">
+
+    </form>
+
+
+    <script>
+
+
+        function logar(){
+
+            var login = document.getElementById('login').value;
+            var senha = document.getElementById('senha').value;
+
+            if(login == "ivanildo" && senha == "123"){
+                alert('Sucesso');
+                location.href = "page1.html";
+            }else{
+                alert('Usuario ou senha incorretos');
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
